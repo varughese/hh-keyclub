@@ -111,6 +111,11 @@ div.has-button-bar {
         display: none;
     }
 }
+@media screen and (max-height: 620px) {
+    footer {
+        display: none;
+    }
+}
 
 .filtertable {
 
