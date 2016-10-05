@@ -114,3 +114,19 @@ div.has-button-bar {
     top: 3px;
     left: 2px;
 }
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #d6d6d6;
+    color: #484848;
+    text-align: right;
+}
+footer p {
+    margin: 0;
+    margin-right: 14px;
+    font-size: 10px;
+}
