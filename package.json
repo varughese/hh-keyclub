@@ -35,12 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/varughese/hh-nhs.git"
+    "url": "git+https://github.com/varughese/hh-keyclub.git"
   },
   "author": "Mathew Varughese",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/varughese/hh-nhs/issues"
+    "url": "https://github.com/varughese/hh-keyclub/issues"
   },
-  "homepage": "https://github.com/varughese/hh-nhs#readme"
+  "homepage": "https://github.com/varughese/hh-keyclub#readme"
 }
