@@ -53,7 +53,7 @@
                         </a>
                     </b>
 					<div class="time-info">
-						<span><b>Date</b> {{event.date | date : 'EEE, MMM, d'}}</span>
+						<span><b>Location</b> {{event.location}}</span>
 					</div>
                     <div class="time-info">
                         <span><b>Time</b> {{event.timeStart}} – {{event.timeEnd}}</span>
@@ -61,7 +61,7 @@
                     <div class="description" ng-bind-html="event.htmlDescription"></div>
                 </div>
             </td>
-            <td>{{event.location}}</td>
+            <td>{{event.date | date : 'EEEE, MMM, d'}}</td>
         </tr>
     </tbody>
 </table>
