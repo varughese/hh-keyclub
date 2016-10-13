@@ -50,6 +50,10 @@ body {
     border-bottom: #0f2e56;
 }
 
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
 .navbar-inverse .navbar-nav > li > a {
     color: white;
 }
@@ -70,6 +74,15 @@ body {
     font-style: italic;
 }
 
+
+.uevent-table .description a {
+    font-size: 15px;
+    background: #18619c;
+    color: #bcdcff;
+    font-weight: bold;
+    padding: 0 10px;
+    font-style: normal;
+}
 .uevent-table .edit span {
     margin-right: 3px;
 }
