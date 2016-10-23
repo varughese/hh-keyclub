@@ -3,10 +3,11 @@
 <span class="glyphicon glyphicon-trash"></span> Delete
 </button></h2>
 
+<pre>{{ upcoming | json }}</pre>
 <form ng-submit="saveEvent()">
   <div class="form-group">
     <label>Name</label>
-    <input ng-model="eventData.name" uib-typeahead="uevent.name for uevent in upcoming | limitTo:8 | filter: {'name': $viewValue }"
+    <input ng-model="eventData.name" uib-typeahead="uevent.name for uevent in upcoming | filter: {'name': $viewValue }"
            typeahead-on-select='setUEvent($item)'
            type="text" class="form-control" placeholder="Name">
   </div>
