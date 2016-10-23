@@ -18,7 +18,7 @@
 
 body {
     padding-bottom: 6px;
-    font-family: 'Roboto';
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .navbar {
