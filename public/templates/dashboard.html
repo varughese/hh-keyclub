@@ -2,11 +2,11 @@
     Events
     <a ui-sref="event.create" class="btn btn-default">
         <span class="glyphicon glyphicon-plus"></span>
-        Add
+        <span>Add</span>
 	</a>
 </h2>
 
-<table class="table clickable-table">
+<table class="table table-striped clickable-table">
     <thead>
         <tr>
             <th>Event</th>
@@ -15,7 +15,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="event in events" ui-sref="event.edit({eventID: '{{event._id}}' })">
+        <tr ng-repeat="event in events | orderBy: '-date'" ui-sref="event.edit({eventID: '{{event._id}}' })">
             <td>{{event.name}}</td>
             <td>{{event.hours}}</td>
             <td>{{event.date | date : 'EEE, MMM, d'}}</td>
@@ -32,7 +32,10 @@
     Upcoming Events
     <a ng-if="user.admin" ui-sref="uevent.create" class="btn btn-default">
         <span class="glyphicon glyphicon-plus"></span>
-        Add
+        <span class="hide-when-small">Add</span>
+    </a>&nbsp;<a ng-if="user.admin" ui-sref="uevent.all" class="btn btn-default">
+        <span class="glyphicon glyphicon-zoom-in"></span>
+        <span class="hide-when-small">Edit Upcoming Events</span>
     </a>
 </h2>
 
@@ -40,7 +43,7 @@
     <thead>
         <tr>
             <th>Event</th>
-            <th>Location</th>
+            <th>Date</th>
         </tr>
     </thead>
     <tbody>
@@ -53,7 +56,7 @@
                         </a>
                     </b>
 					<div class="time-info">
-						<span><b>Location</b> {{event.location}}</span>
+						<span><b>Location</b> {{event.location}} </span>
 					</div>
                     <div class="time-info">
                         <span><b>Time</b> {{event.timeStart}} – {{event.timeEnd}}</span>
