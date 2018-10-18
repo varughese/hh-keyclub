@@ -21,7 +21,12 @@ app.use(function(req, res, next) {
 app.use(morgan('dev'));
 
 
-mongoose.connect(config.database);
+mongoose.plugin(schema => {
+    schema.options.usePushEach = true
+});
+mongoose.connect(config.database, {
+    useMongoClient: true
+});
 
 var apiRoutes = require('./server/routes/api')(app, express);
 app.use('/api', apiRoutes);
